@@ -110,6 +110,8 @@ public class BrokerConfig extends BrokerIdentity {
 
     private boolean longPollingEnable = true;
 
+    private long longPollingTimeMills = 5 * 1000;
+
     private long shortPollingTimeMills = 1000;
 
     private boolean notifyConsumerIdsChangedEnable = true;
@@ -828,6 +830,13 @@ public class BrokerConfig extends BrokerIdentity {
         this.longPollingEnable = longPollingEnable;
     }
 
+    public long getLongPollingTimeMills() {
+        return longPollingTimeMills;
+    }
+
+    public void setLongPollingTimeMills(long longPollingTimeMills) {
+        this.longPollingTimeMills = longPollingTimeMills;
+    }
     public boolean isNotifyConsumerIdsChangedEnable() {
         return notifyConsumerIdsChangedEnable;
     }
